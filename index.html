@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./progressStyle.css">   
+    <title>Progress</title>
+  </head>
+
+  <body>
+    <div class="progress-container">
+      <div class="progress">
+        <svg class="progress-bar">
+          <circle class="progress-bar__cercle-back" cx="60" cy="60" r="52"></circle>
+          <circle class="progress-bar__cercle" cx="60" cy="60" r="52" id="circle">
+
+          </circle>
+        </svg>
+      </div>
+
+      <div class="control">
+
+        <label for="progress-value">
+          <input class="number__input"
+            type="number"
+            id="progress-value"
+            onchange="progressBar.handleChange(this.value)"
+            value="0";
+            min="1"
+            max="100"
+          />
+          <span>Value</span>
+        </label>
+
+        <label for="animateToggle">
+          <input class="checkbox_input animate" type="checkbox" id="animateToggle" onchange="progressBar.setAnimated(this.checked)" />
+          <span class="checkbox_inner">Animate</span>
+        </label>
+
+        <label for="hide-toggle">
+          <input class="checkbox_input" type="checkbox" id="hide-toggle" onchange="progressBar.setHidden(this.checked)" />
+          <span class="checkbox_inner">Hide</span>
+        </label>
+
+        
+
+      </div>
+    </div>
+
+    <script src="./progress.js"></script>
+  </body>
+</html>
