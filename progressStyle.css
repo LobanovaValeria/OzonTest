@@ -1,14 +1,16 @@
-body{
+body {
     margin: 0;
 }
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 .progress-container {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -18,40 +20,47 @@ input[type="number"]::-webkit-outer-spin-button {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    
+
 }
-.progress-bar{
+
+.progress-bar {
     width: 120px;
     height: 120px;
-    
+
 }
-.progress-bar__cercle, .progress-bar__cercle-back{
-    
+
+.progress-bar__cercle, .progress-bar__cercle-back {
+
     stroke-width: 12px;
     fill: transparent;
-    
+
 }
-.progress-bar__cercle{
+
+.progress-bar__cercle {
     stroke: #003EFF;
     transform-origin: center;
     transform: rotate(-90deg);
     transition: stroke-dasharray 0.3s transform ease-in-out 3.6s;
-    stroke-dasharray:0 0;
+    stroke-dasharray: 0 0;
 }
-.progress-bar__cercle-back{
+
+.progress-bar__cercle-back {
     stroke: #D7E0EC;
 }
-.control{
+
+.control {
     display: flex;
-   
+
     flex-direction: column;
     gap: 12px;
 }
-label{
+
+label {
     display: inline-block;
     vertical-align: middle;
-} 
-.number__input{
+}
+
+.number__input {
     width: 43px;
     height: 26px;
     border-radius: 40px;
@@ -63,7 +72,8 @@ label{
     text-align: center;
     margin-right: 12px;
 }
-.checkbox_input{
+
+.checkbox_input {
     position: absolute;
     opacity: 0;
     width: 0;
@@ -71,15 +81,17 @@ label{
     appearance: 0;
     display: inline-block;
 }
-.checkbox_inner{
+
+.checkbox_inner {
     display: inline-block;
     position: relative;
     padding-left: 65px;
     line-height: 1.9;
     height: 30px;
-    
+
 }
-.checkbox_inner::before{
+
+.checkbox_inner::before {
     display: block;
     content: "";
     position: absolute;
@@ -89,10 +101,11 @@ label{
     background-color: #D7E0EC;
     top: 0;
     left: 0;
-    transition: background-color 0.3s ;
-    
+    transition: background-color 0.3s;
+
 }
-.checkbox_inner::after{
+
+.checkbox_inner::after {
     display: block;
     content: "";
     position: absolute;
@@ -103,17 +116,17 @@ label{
     left: 3px;
     top: 3px;
 }
-.checkbox_input:checked+.checkbox_inner::before{
-    background-color: #000eff ;
+
+.checkbox_input:checked+.checkbox_inner::before {
+    background-color: #000eff;
 }
-.checkbox_input:checked+.checkbox_inner::after{
+
+.checkbox_input:checked+.checkbox_inner::after {
     left: 20px;
 }
-@media(orientation:landscape){
-    .progress-container{
+
+@media(orientation:landscape) {
+    .progress-container {
         flex-direction: row;
     }
 }
-
-
-
